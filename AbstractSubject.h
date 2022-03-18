@@ -7,9 +7,9 @@ class AbstractSubject {
 public:
     virtual ~AbstractSubject() = default;
 
-    virtual void Attach(AbstractObserver *observer) = 0;
+    virtual void Subscribe(AbstractObserver *observer) = 0;
 
-    virtual void Detach(AbstractObserver *observer) = 0;
+    virtual void Unsubscribe(AbstractObserver *observer) = 0;
 
     virtual void Notify() = 0;
 };
