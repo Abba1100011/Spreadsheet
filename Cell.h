@@ -2,7 +2,7 @@
 #define SPREADSHEET_CELL_H
 
 #include "AbstractSubject.h"
-#include "Formulas.h"
+class Formulas;
 
 class Cell : public AbstractSubject {
 public:
@@ -27,6 +27,14 @@ public:
 private:
     float CellValue;
     Formulas *CellFunction;
+
+    friend class Max;
+
+    friend class Min;
+
+    friend class Sum;
+
+    friend class Mean;
 };
 
 

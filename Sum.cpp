@@ -1,3 +1,4 @@
+
 #include "Sum.h"
 
 Sum::Sum() {

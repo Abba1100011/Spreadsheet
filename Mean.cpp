@@ -1,3 +1,4 @@
+
 #include "Mean.h"
 
 Mean::Mean() {

@@ -1,7 +1,9 @@
+
 #ifndef SPREADSHEET_SUM_H
 #define SPREADSHEET_SUM_H
 
 #include "Formulas.h"
+#include <list>
 
 class Sum final : public Formulas {
 public:
@@ -10,6 +12,9 @@ public:
     ~Sum() final;
 
     float GetSum();
+
+protected:
+    std::list<Cell *> CellParameters;
 };
 
 

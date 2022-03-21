@@ -2,6 +2,7 @@
 #define SPREADSHEET_MEAN_H
 
 #include "Formulas.h"
+#include <list>
 
 class Mean final : public Formulas {
 public:
@@ -10,6 +11,9 @@ public:
     ~Mean() final;
 
     float GetMean();
+
+protected:
+    std::list<Cell *> CellParameters;
 };
 
 
