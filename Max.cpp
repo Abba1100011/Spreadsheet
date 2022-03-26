@@ -21,3 +21,7 @@ float Max::GetMax() {
     return value;
 }
 
+float Max::update() {
+    return (GetMax());
+}
+

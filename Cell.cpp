@@ -1,4 +1,5 @@
 #include "Cell.h"
+#include <iostream>
 
 Cell::Cell(float v) : CellValue(v) {
 
@@ -8,12 +9,12 @@ Cell::~Cell() {
 
 }
 
-void Cell::Subscribe(AbstractObserver *observer) {
-
+void Cell::Subscribe() {
+    CellFunction->attach(this);
 }
 
-void Cell::Unsubscribe(AbstractObserver *observer) {
-
+void Cell::Unsubscribe() {
+    CellFunction->detach(this);
 }
 
 void Cell::Notify() {
@@ -21,21 +22,25 @@ void Cell::Notify() {
 }
 
 float Cell::SumFunction() {
-    float value;
-    return value;
+    std::cout << "richiesta funzione: somma" << std::endl;
+    CellValue = CellFunction->update();
+    return CellValue;
 }
 
 float Cell::MaxFunction() {
-    float value;
-    return value;
+    std::cout << "richiesta funzione: massimo" << std::endl;
+    CellValue = CellFunction->update();
+    return CellValue;
 }
 
 float Cell::MinFunction() {
-    float value;
-    return value;
+    std::cout << "richiesta funzione: minimo" << std::endl;
+    CellValue = CellFunction->update();
+    return CellValue;
 }
 
 float Cell::MeanFunction() {
-    float value;
-    return value;
+    std::cout << "richiesta funzione: media" << std::endl;
+    CellValue = CellFunction->update();
+    return CellValue;
 }

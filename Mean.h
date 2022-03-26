@@ -1,8 +1,8 @@
 #ifndef SPREADSHEET_MEAN_H
 #define SPREADSHEET_MEAN_H
 
+
 #include "Formulas.h"
-#include <list>
 
 class Mean final : public Formulas {
 public:
@@ -12,8 +12,8 @@ public:
 
     float GetMean();
 
-protected:
-    std::list<Cell *> CellParameters;
+    float update() override;
+
 };
 
 

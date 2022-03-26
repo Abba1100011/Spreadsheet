@@ -2,8 +2,8 @@
 #ifndef SPREADSHEET_MIN_H
 #define SPREADSHEET_MIN_H
 
+
 #include "Formulas.h"
-#include <list>
 
 class Min final : public Formulas {
 public:
@@ -13,8 +13,8 @@ public:
 
     float GetMin();
 
-protected:
-    std::list<Cell *> CellParameters;
+    float update() override;
+
 };
 
 #endif //SPREADSHEET_MIN_H

@@ -1,8 +1,9 @@
 #ifndef SPREADSHEET_CELL_H
 #define SPREADSHEET_CELL_H
 
+
 #include "AbstractSubject.h"
-class Formulas;
+#include "Formulas.h"
 
 class Cell : public AbstractSubject {
 public:
@@ -10,9 +11,9 @@ public:
 
     ~Cell();
 
-    void Subscribe(AbstractObserver *observer) override;
+    void Subscribe() override;
 
-    void Unsubscribe(AbstractObserver *observer) override;
+    void Unsubscribe() override;
 
     void Notify() override;
 
@@ -26,6 +27,7 @@ public:
 
 private:
     float CellValue;
+
     Formulas *CellFunction;
 
     friend class Max;

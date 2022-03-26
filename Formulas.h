@@ -2,14 +2,21 @@
 #define SPREADSHEET_FORMULAS_H
 
 
+#include <list>
 #include "AbstractObserver.h"
 #include "Cell.h"
 
+
 class Formulas : public AbstractObserver {
 public:
-// creare 4 classi derivate una per ogni operazione
-    void update() override;
+    virtual float update() = 0;
 
+    float attach(AbstractSubject *c) override;
+
+    void detach(AbstractSubject *c) override;
+
+protected:
+    std::list<Cell *> CellParameters;
 };
 
 

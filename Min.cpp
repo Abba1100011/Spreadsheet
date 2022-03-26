@@ -1,3 +1,4 @@
+
 #include "Min.h"
 
 Min::Min() {
@@ -18,4 +19,8 @@ float Min::GetMin() {
         }
     }
     return value;
+}
+
+float Min::update() {
+    return (GetMin());
 }

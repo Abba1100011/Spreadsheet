@@ -16,3 +16,7 @@ float Sum::GetSum() {
     }
     return value;
 }
+
+float Sum::update() {
+    return (GetSum());
+}

@@ -19,3 +19,7 @@ float Mean::GetMean() {
     value = value / count;
     return value;
 }
+
+float Mean::update() {
+    return (GetMean());
+}
