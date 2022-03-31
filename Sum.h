@@ -9,9 +9,7 @@ class Sum final : public Formulas {
 public:
     Sum();
 
-    ~Sum() final;
-
-    float GetSum();
+    virtual ~Sum() override;
 
     float update() override;
 

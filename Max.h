@@ -4,14 +4,14 @@
 
 
 #include "Formulas.h"
+#include "Cell.h"
+
 
 class Max final : public Formulas {
 public:
     Max();
 
-    ~Max() final;
-
-    float GetMax();
+    virtual ~Max() final;
 
     float update() override;
 

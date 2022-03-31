@@ -1,21 +1,27 @@
 #ifndef SPREADSHEET_CELL_H
 #define SPREADSHEET_CELL_H
 
-
+#include "AbstractObserver.h"
 #include "AbstractSubject.h"
 #include "Formulas.h"
+#include "Sum.h"
+#include "Min.h"
+#include "Mean.h"
+#include "Max.h"
 
 class Cell : public AbstractSubject {
 public:
     Cell(float v);
 
-    ~Cell();
+    virtual ~Cell();
 
     void Subscribe() override;
 
     void Unsubscribe() override;
 
     void Notify() override;
+
+    bool LockSetting();
 
     float SumFunction();
 
@@ -25,10 +31,13 @@ public:
 
     float MeanFunction();
 
+
 private:
     float CellValue;
 
-    Formulas *CellFunction;
+    bool LockProperty;
+
+    Formulas *CellFunction; //ricontrollare costruttore
 
     friend class Max;
 

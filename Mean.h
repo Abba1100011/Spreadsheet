@@ -8,9 +8,7 @@ class Mean final : public Formulas {
 public:
     Mean();
 
-    ~Mean() final;
-
-    float GetMean();
+    virtual ~Mean() final;
 
     float update() override;
 

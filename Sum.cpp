@@ -9,14 +9,10 @@ Sum::~Sum() {
 
 }
 
-float Sum::GetSum() {
+float Sum::update() {
     float value = 0;
     for (auto SumCells: CellParameters) {
         value += SumCells->CellValue;
     }
     return value;
-}
-
-float Sum::update() {
-    return (GetSum());
 }

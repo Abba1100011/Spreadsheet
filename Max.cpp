@@ -9,7 +9,7 @@ Max::~Max() {
 
 }
 
-float Max::GetMax() {
+float Max::update() {
     float value;
     auto it = CellParameters.begin();
     value = (*it)->CellValue;
@@ -19,9 +19,5 @@ float Max::GetMax() {
         }
     }
     return value;
-}
-
-float Max::update() {
-    return (GetMax());
 }
 

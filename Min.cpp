@@ -9,7 +9,7 @@ Min::~Min() {
 
 }
 
-float Min::GetMin() {
+float Min::update() {
     float value;
     auto it = CellParameters.begin();
     value = (*it)->CellValue;
@@ -19,8 +19,4 @@ float Min::GetMin() {
         }
     }
     return value;
-}
-
-float Min::update() {
-    return (GetMin());
 }

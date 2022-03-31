@@ -9,9 +9,7 @@ class Min final : public Formulas {
 public:
     Min();
 
-    ~Min() final;
-
-    float GetMin();
+    virtual ~Min() final;
 
     float update() override;
 

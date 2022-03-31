@@ -9,7 +9,7 @@ Mean::~Mean() {
 
 }
 
-float Mean::GetMean() {
+float Mean::update() {
     float value = 0;
     float count = 0;
     for (auto MeanCell: CellParameters) {
@@ -18,8 +18,4 @@ float Mean::GetMean() {
     }
     value = value / count;
     return value;
-}
-
-float Mean::update() {
-    return (GetMean());
 }
