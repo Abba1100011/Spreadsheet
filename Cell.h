@@ -3,11 +3,12 @@
 
 #include "AbstractObserver.h"
 #include "AbstractSubject.h"
-#include "Formulas.h"
-#include "Sum.h"
-#include "Min.h"
-#include "Mean.h"
-#include "Max.h"
+#include "OperationColumn.h"
+#include "SumColumn.h"
+#include "MinColumn.h"
+#include "MeanColumn.h"
+#include "MaxColumn.h"
+
 
 class Cell : public AbstractSubject {
 public:
@@ -21,31 +22,16 @@ public:
 
     void Notify() override;
 
-    bool LockSetting();
+    float getCellValue();
 
-    float SumFunction();
-
-    float MaxFunction();
-
-    float MinFunction();
-
-    float MeanFunction();
+    void setCellValue(float cellValue);
 
 
 private:
     float CellValue;
 
-    bool LockProperty;
+    OperationColumn *CellFunction;
 
-    Formulas *CellFunction; //ricontrollare costruttore
-
-    friend class Max;
-
-    friend class Min;
-
-    friend class Sum;
-
-    friend class Mean;
 };
 
 
