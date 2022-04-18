@@ -8,3 +8,7 @@ float OperationColumn::attach(Cell *c) {
 void OperationColumn::detach(Cell *c) {
     CellParameters.remove(c);
 }
+
+float OperationColumn::getResult() const {
+    return result;
+}

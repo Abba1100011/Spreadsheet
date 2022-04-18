@@ -32,6 +32,3 @@ void Cell::setCellValue(float cellValue) {
     CellValue = cellValue;
 }
 
-
-
-

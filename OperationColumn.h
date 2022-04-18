@@ -15,6 +15,8 @@ public:
 
     void detach(Cell *c);
 
+    float getResult() const;
+
 protected:
     float result;
     std::list<Cell *> CellParameters;
