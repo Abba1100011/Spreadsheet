@@ -2,7 +2,7 @@
 #define SPREADSHEET_ABSTRACTOBSERVER_H
 
 
-#include "AbstractSubject.h"
+class AbstractSubject;
 
 class AbstractObserver {
 public:

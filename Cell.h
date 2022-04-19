@@ -1,13 +1,7 @@
 #ifndef SPREADSHEET_CELL_H
 #define SPREADSHEET_CELL_H
 
-#include "AbstractObserver.h"
 #include "AbstractSubject.h"
-#include "OperationColumn.h"
-#include "SumColumn.h"
-#include "MinColumn.h"
-#include "MeanColumn.h"
-#include "MaxColumn.h"
 
 
 class Cell : public AbstractSubject {
@@ -16,9 +10,9 @@ public:
 
     virtual ~Cell();
 
-    void Subscribe() override;
+    void Subscribe(AbstractObserver *Ao) override;
 
-    void Unsubscribe() override;
+    void Unsubscribe(AbstractObserver *Ao) override;
 
     void Notify() override;
 
@@ -30,7 +24,7 @@ public:
 private:
     float CellValue;
 
-    OperationColumn *CellFunction;
+    AbstractObserver *Column;
 
 };
 

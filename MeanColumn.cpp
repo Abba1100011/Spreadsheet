@@ -12,7 +12,7 @@ MeanColumn::~MeanColumn() {
 float MeanColumn::update() {
     float value = 0;
     float count = 0;
-    for (auto MeanCell: CellParameters) {
+    for (auto MeanCell: SubCells) {
         value += MeanCell->getCellValue();
         count++;
     }

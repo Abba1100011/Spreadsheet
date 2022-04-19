@@ -11,9 +11,9 @@ MaxColumn::~MaxColumn() {
 
 float MaxColumn::update() {
     float value;
-    auto it = CellParameters.begin();
+    auto it = SubCells.begin();
     value = (*it)->getCellValue();
-    for (auto MaxCells: CellParameters) {
+    for (auto MaxCells: SubCells) {
         if (MaxCells->getCellValue() > value) {
             value = MaxCells->getCellValue();
         }

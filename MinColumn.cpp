@@ -11,9 +11,9 @@ MinColumn::~MinColumn() {
 
 float MinColumn::update() {
     float value;
-    auto it = CellParameters.begin();
+    auto it = SubCells.begin();
     value = (*it)->getCellValue();
-    for (auto MinCells: CellParameters) {
+    for (auto MinCells: SubCells) {
         if (MinCells->getCellValue() < value) {
             value = MinCells->getCellValue();
         }

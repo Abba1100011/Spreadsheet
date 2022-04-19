@@ -11,7 +11,7 @@ SumColumn::~SumColumn() {
 
 float SumColumn::update() {
     float value = 0;
-    for (auto SumCells: CellParameters) {
+    for (auto SumCells: SubCells) {
         value += SumCells->getCellValue();
     }
     this->result = value;

@@ -5,21 +5,21 @@
 #include <list>
 #include "AbstractObserver.h"
 
-class Cell;
+
 
 class OperationColumn : public AbstractObserver {
 public:
     virtual float update() = 0;
 
-    float attach(Cell *c);
+    float attach(AbstractSubject *c) override;
 
-    void detach(Cell *c);
+    void detach(AbstractSubject *c) override;
 
     float getResult() const;
 
 protected:
     float result;
-    std::list<Cell *> CellParameters;
+    std::list<AbstractSubject *> SubCells;
 };
 
 
