@@ -10,9 +10,10 @@ MinColumn::~MinColumn() {
 }
 
 float MinColumn::update() {
-    float value;
+    float value = 0;
     auto it = SubCells.begin();
-    value = (*it)->getCellValue();
+    if (typeid((*it)->getCellValue()) == typeid(float) && *it != NULL)
+        value = (*it)->getCellValue();
     for (auto MinCells: SubCells) {
         if (MinCells->getCellValue() < value) {
             value = MinCells->getCellValue();
