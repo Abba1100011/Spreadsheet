@@ -10,9 +10,9 @@ MaxColumn::~MaxColumn() {
 }
 
 float MaxColumn::update() {
-    float value = 0;
+    float value;
     auto it = SubCells.begin();
-    if (typeid((*it)->getCellValue()) == typeid(float) && *it != NULL)
+    if (*it != nullptr)
         value = (*it)->getCellValue();
     for (auto MaxCells: SubCells) {
         if (MaxCells->getCellValue() > value) {
