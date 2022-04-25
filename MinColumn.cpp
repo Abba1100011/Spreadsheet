@@ -27,7 +27,7 @@ float MinColumn::update() {
     }
     catch (const std::exception &e) {
         std::cerr << "Error while updating result : " << e.what() << std::endl;
-        this->result = std::numeric_limits<float>::min();
+        this->result = std::numeric_limits<float>::quiet_NaN();
     }
     return result;
 }
