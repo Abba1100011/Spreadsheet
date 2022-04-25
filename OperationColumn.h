@@ -1,10 +1,11 @@
 #ifndef SPREADSHEET_OPERATIONCOLUMN_H
 #define SPREADSHEET_OPERATIONCOLUMN_H
 
-
 #include <list>
+#include <stdexcept>
+#include <limits>
+#include <iostream>
 #include "AbstractObserver.h"
-
 
 
 class OperationColumn : public AbstractObserver {

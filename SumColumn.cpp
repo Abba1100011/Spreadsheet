@@ -15,5 +15,5 @@ float SumColumn::update() {
         value += SumCells->getCellValue();
     }
     this->result = value;
-    return value;
+    return result;
 }

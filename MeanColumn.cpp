@@ -18,5 +18,5 @@ float MeanColumn::update() {
     }
     value = value / count;
     this->result = value;
-    return value;
+    return result;
 }

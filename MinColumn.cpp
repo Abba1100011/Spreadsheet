@@ -11,14 +11,23 @@ MinColumn::~MinColumn() {
 
 float MinColumn::update() {
     float value;
-    auto it = SubCells.begin();
-    if (*it != NULL)
-        value = (*it)->getCellValue();
-    for (auto MinCells: SubCells) {
-        if (MinCells->getCellValue() < value) {
-            value = MinCells->getCellValue();
+    try {
+        auto it = SubCells.begin();
+        if (*it == nullptr)
+            throw std::domain_error("no parameters inside the column");
+        else {
+            value = (*it)->getCellValue();
+            for (auto MinCells: SubCells) {
+                if (MinCells->getCellValue() < value) {
+                    value = MinCells->getCellValue();
+                }
+            }
+            this->result = value;
         }
     }
-    this->result = value;
-    return value;
+    catch (const std::exception &e) {
+        std::cerr << "Error while updating result : " << e.what() << std::endl;
+        this->result = std::numeric_limits<float>::min();
+    }
+    return result;
 }
