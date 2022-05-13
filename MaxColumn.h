@@ -11,7 +11,7 @@ class MaxColumn final : public OperationColumn {
 public:
     MaxColumn();
 
-    virtual ~MaxColumn() final;
+    ~MaxColumn() final;
 
     float update() override;
 

@@ -10,7 +10,7 @@ class MinColumn final : public OperationColumn {
 public:
     MinColumn();
 
-    virtual ~MinColumn() final;
+    ~MinColumn() final;
 
     float update() override;
 

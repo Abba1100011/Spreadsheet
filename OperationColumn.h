@@ -12,11 +12,11 @@ class OperationColumn : public AbstractObserver {
 public:
     virtual float update() = 0;
 
-    float attach(AbstractSubject *c) override;
+    void attach(AbstractSubject *c) override;
 
     void detach(AbstractSubject *c) override;
 
-    float getResult() const;
+    float getResult() const override;
 
 protected:
     float result;

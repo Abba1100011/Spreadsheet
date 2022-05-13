@@ -1,7 +1,7 @@
 #include "OperationColumn.h"
 
 
-float OperationColumn::attach(AbstractSubject *c) {
+void OperationColumn::attach(AbstractSubject *c) {
     SubCells.push_back(c);
 }
 

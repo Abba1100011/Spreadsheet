@@ -10,7 +10,7 @@ class SumColumn final : public OperationColumn {
 public:
     SumColumn();
 
-    virtual ~SumColumn() override;
+    ~SumColumn() override;
 
     float update() override;
 

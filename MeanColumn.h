@@ -9,7 +9,7 @@ class MeanColumn final : public OperationColumn {
 public:
     MeanColumn();
 
-    virtual ~MeanColumn() final;
+    ~MeanColumn() final;
 
     float update() override;
 

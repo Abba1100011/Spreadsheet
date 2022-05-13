@@ -16,7 +16,7 @@ public:
 
     void Notify() override;
 
-    float getCellValue();
+    float getCellValue() override;
 
     void setCellValue(float cellValue);
 

@@ -10,7 +10,7 @@ public:
 
     virtual float update() = 0;
 
-    virtual float attach(AbstractSubject *c) = 0;
+    virtual void attach(AbstractSubject *c) = 0;
 
     virtual void detach(AbstractSubject *c) = 0;
 
