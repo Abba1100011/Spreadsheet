@@ -3,7 +3,7 @@ project(Spreadsheet)
 
 set(CMAKE_CXX_STANDARD 14)
 
-#add_subdirectory(UnitTesting)
+add_subdirectory(Test)
 
 set(SOURCE_FILES AbstractObserver.h AbstractSubject.h Cell.cpp Cell.h MaxColumn.cpp MaxColumn.h MeanColumn.cpp MeanColumn.h MinColumn.cpp MinColumn.h OperationColumn.cpp OperationColumn.h SumColumn.cpp SumColumn.h)
 add_executable(Spreadsheet main.cpp)
