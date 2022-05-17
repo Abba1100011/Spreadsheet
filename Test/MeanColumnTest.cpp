@@ -11,7 +11,7 @@ TEST(MeanColumnTest, unsignedTestImput) {
     c.Subscribe(&a);
     EXPECT_FLOAT_EQ(a.getResult(), 7.5);
     d.Subscribe(&a);
-    EXPECT_FLOAT_EQ(a.getResult(), 6.33333);
+    EXPECT_FLOAT_EQ(a.getResult(), 6.333335);
     c.Unsubscribe(&a);
     EXPECT_FLOAT_EQ(a.getResult(), 4.5);
     b.Unsubscribe(&a);

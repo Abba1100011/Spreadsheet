@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 #include "../MinColumn.h"
 
-TEST(MinColumnTest, unsignedTestImpput) {
+TEST(MinColumnTest, unsignedTestImput) {
     MinColumn a;
     Cell b(5);
     Cell c(10);
@@ -37,7 +37,7 @@ TEST(MinColumnTest, negativeTestImput) {
 
 }
 
-TEST(MinColumnTest, floatTestImtput) {
+TEST(MinColumnTest, floatTestImput) {
     MinColumn a;
     Cell b(5.0);
     Cell c(5.31);
@@ -55,7 +55,7 @@ TEST(MinColumnTest, floatTestImtput) {
 
 }
 
-TEST(MinColumnTest, mixedTestOutput) {
+TEST(MinColumnTest, mixedTestImput) {
     MinColumn a;
     Cell b(5);
     Cell c(-10);
