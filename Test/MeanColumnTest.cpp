@@ -47,7 +47,7 @@ TEST(MeanColumnTest, floatTestImput) {
     c.Subscribe(&a);
     EXPECT_FLOAT_EQ(a.getResult(), 5.155);
     d.Subscribe(&a);
-    EXPECT_FLOAT_EQ(a.getResult(), 5.20333);
+    EXPECT_FLOAT_EQ(a.getResult(), 5.2033333);
     c.Unsubscribe(&a);
     EXPECT_FLOAT_EQ(a.getResult(), 5.15);
     b.Unsubscribe(&a);
