@@ -1,42 +1,42 @@
 #include "gtest/gtest.h"
 #include "../MaxColumn.h"
 
-TEST(MaxColumnTest, unsignedTestOutput) {
+TEST(MaxColumnTest, unsignedTestImput) {
     MaxColumn a;
     Cell b(5);
     Cell c(10);
     Cell d(4);
     b.Subscribe(&a);
-    EXPECT_EQ(a.getResult(), 5);
+    EXPECT_FLOAT_EQ(a.getResult(), 5);
     c.Subscribe(&a);
-    EXPECT_EQ(a.getResult(), 10);
+    EXPECT_FLOAT_EQ(a.getResult(), 10);
     d.Subscribe(&a);
-    EXPECT_EQ(a.getResult(), 10);
+    EXPECT_FLOAT_EQ(a.getResult(), 10);
     c.Unsubscribe(&a);
-    EXPECT_EQ(a.getResult(), 5);
+    EXPECT_FLOAT_EQ(a.getResult(), 5);
     b.Unsubscribe(&a);
-    EXPECT_EQ(a.getResult(), 4);
+    EXPECT_FLOAT_EQ(a.getResult(), 4);
 }
 
-TEST(MaxColumnTest, negativeTestOutput) {
+TEST(MaxColumnTest, negativeTestImput) {
     MaxColumn a;
     Cell b(-3);
     Cell c(-4);
     Cell d(-7);
     b.Subscribe(&a);
-    EXPECT_EQ(a.getResult(), -3);
+    EXPECT_FLOAT_EQ(a.getResult(), -3);
     c.Subscribe(&a);
-    EXPECT_EQ(a.getResult(), -3);
+    EXPECT_FLOAT_EQ(a.getResult(), -3);
     d.Subscribe(&a);
-    EXPECT_EQ(a.getResult(), -3);
+    EXPECT_FLOAT_EQ(a.getResult(), -3);
     c.Unsubscribe(&a);
-    EXPECT_EQ(a.getResult(), -3);
+    EXPECT_FLOAT_EQ(a.getResult(), -3);
     b.Unsubscribe(&a);
-    EXPECT_EQ(a.getResult(), -7);
+    EXPECT_FLOAT_EQ(a.getResult(), -7);
 
 }
 
-TEST(MaxColumnTest, floatTestOutput) {
+TEST(MaxColumnTest, floatTestImput) {
     MaxColumn a;
     Cell b(5.0);
     Cell c(5.31);
@@ -54,7 +54,7 @@ TEST(MaxColumnTest, floatTestOutput) {
 
 }
 
-TEST(MaxColumnTest, mixedTestOutput) {
+TEST(MaxColumnTest, mixedTestImput) {
     MaxColumn a;
     Cell b(5);
     Cell c(-10);
