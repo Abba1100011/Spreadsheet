@@ -14,7 +14,14 @@ int main() {
     a = new Cell(10);
     b = new Cell(5);
     c = new Cell(3);
-    A = new SumColumn(); //Sostituire con apposito costruttore a seconda dell'operazione richiesta
+
+
+    //Sostituire con apposito costruttore a seconda dell'operazione richiesta
+
+    A = new SumColumn();
+    //A = new MeanColumn();
+    //A = new MaxColumn();
+    //A = new MinColumn();
 
     a->Subscribe(A);
     b->Subscribe(A);
